@@ -178,5 +178,199 @@
       "Fund houses publish the current expense ratio of each scheme on their websites, so check the current figure there.",
       "The expense ratio is one of several things to read in the scheme documents, along with the investment objective and the risk level."
     ]
+  },
+  {
+    "slug": "sip-vs-lump-sum-investing",
+    "title": "SIP vs Lump Sum Investing: How the Two Methods Differ",
+    "topic": "SIP versus lump sum investing: how the methods differ",
+    "category": "mutual-funds",
+    "status": "queued",
+    "imageQuery": "calendar planner desk",
+    "sources": [],
+    "outline": [
+      "What each method is",
+      "How the purchase price differs",
+      "Cash flow and convenience",
+      "Costs, exit load and holding periods",
+      "What neither method can do"
+    ],
+    "facts": [
+      "This article compares two ways of investing in a mutual fund scheme: a lump sum and a SIP.",
+      "A lump sum investment puts the whole amount into a scheme on one date. A SIP puts in a fixed amount at regular intervals, such as monthly.",
+      "Both methods are used to invest in the same mutual fund schemes. A SIP is a method of investing, not a separate product.",
+      "A lump sum buys all its units at the NAV of a single date. A SIP buys units at the NAV of each instalment date, so the average purchase cost depends on prices across those dates.",
+      "When the NAV is low a SIP instalment buys more units, and when it is high it buys fewer. This is called rupee cost averaging.",
+      "Rupee cost averaging reduces dependence on a single entry date, but it does not protect against losses.",
+      "A lump sum needs the full amount to be available at once. A SIP lets an investor commit smaller amounts out of regular income.",
+      "A SIP is set up through an auto-debit instruction (mandate) with the investor's bank and continues until it is stopped or the stated number of instalments is complete.",
+      "Minimum amounts and available frequencies differ by fund house and scheme, so check the scheme documents.",
+      "Each SIP instalment is treated as a separate purchase, so exit load periods and holding periods for tax are counted from the date of each instalment. Check the scheme documents and the current tax rules.",
+      "For example, ₹12,000 can be invested as one payment of ₹12,000 or as 12 instalments of ₹1,000. The total is the same, but the purchase dates and NAVs differ.",
+      "Neither method guarantees returns, and the NAV can fall as well as rise.",
+      "Which method fits depends on when the money is available and how long it will stay invested, and this differs for each investor."
+    ]
+  },
+  {
+    "slug": "exit-load-in-mutual-funds",
+    "title": "What Is an Exit Load in Mutual Funds and When Does It Apply?",
+    "topic": "What is an exit load in mutual funds and when does it apply",
+    "category": "mutual-funds",
+    "status": "queued",
+    "imageQuery": "exit sign green",
+    "sources": [],
+    "outline": [
+      "What an exit load is",
+      "How it is calculated",
+      "Where the money goes",
+      "Exit load, SIPs and switches",
+      "How to check the exit load of a scheme"
+    ],
+    "facts": [
+      "An exit load is a charge deducted when units are redeemed within a specified period after purchase.",
+      "The exit load is expressed as a percentage of the redemption amount.",
+      "For example, redeeming units worth ₹1,00,000 within the exit load period, with an exit load of 1%, leads to a charge of ₹1,000.",
+      "Not every scheme has an exit load, and the rate and the period differ by scheme. A scheme with no exit load is not necessarily better, and one with an exit load is not necessarily worse.",
+      "Exit load details are disclosed in the scheme documents, in the section on fees and expenses.",
+      "An exit load applies only if units are redeemed within the stated period. After that period no exit load is charged.",
+      "The exit load collected from investors is credited back to the scheme and not kept by the fund house, which benefits the remaining unitholders.",
+      "Exit loads discourage investors from leaving too soon, because withdrawals can make a fund manager's job harder.",
+      "A switch from one scheme to another is treated as a redemption from the source scheme and a purchase in the target scheme, so the exit load of the source scheme can apply.",
+      "For a SIP, each instalment has its own exit load period, counted from its own purchase date.",
+      "SEBI banned entry loads, so there is no charge for buying units, although other costs such as the expense ratio apply.",
+      "The exit load is separate from the expense ratio, which is charged yearly through the NAV.",
+      "Liquid and overnight schemes can have a graded exit load for redemptions within a very short period.",
+      "A scheme can change its exit load through an addendum, so check the current exit load in the scheme documents or the factsheet before redeeming."
+    ]
+  },
+  {
+    "slug": "kyc-for-mutual-funds",
+    "title": "KYC for Mutual Funds: What It Is and How the Process Works",
+    "topic": "KYC for mutual funds: what it is and how the process works",
+    "category": "mutual-funds",
+    "status": "queued",
+    "imageQuery": "documents folder stamp",
+    "sources": [],
+    "outline": [
+      "What KYC means",
+      "What you need",
+      "How KYC is done",
+      "Understanding your KYC status",
+      "Updating your details"
+    ],
+    "facts": [
+      "KYC stands for Know Your Customer. SEBI requires KYC to be completed before an investor can invest in mutual funds.",
+      "KYC establishes the investor's proof of identity and proof of address.",
+      "KYC records are kept by KYC Registration Agencies (KRAs) registered with SEBI.",
+      "KYC is a one-time exercise. Once it is registered through one SEBI-registered intermediary, the investor generally does not have to repeat it with another fund house or intermediary.",
+      "The fund house, a broker or a distributor submits the investor's details to a KRA.",
+      "The PAN is central to KYC, and the KYC status can be checked on a KRA or fund house website using the PAN.",
+      "KYC can be done online, for example with Aadhaar-based verification using an OTP sent to the mobile number linked to Aadhaar, or offline by submitting a KYC form with documents.",
+      "Only specified officially valid documents are accepted as proof of identity and address, and SEBI has changed the list over time, so check the current list with the KRA or fund house.",
+      "A KYC status of Validated means the KRA has verified the identity document and the PAN-Aadhaar link, so the investor can invest across fund houses without submitting documents again.",
+      "A status of Registered can mean the investor has to complete extra steps with a new intermediary.",
+      "Details such as address, mobile number and email can be updated through the KRA or the fund house when they change.",
+      "Standard investor-education notices say to invest only through SEBI-registered mutual funds."
+    ]
+  },
+  {
+    "slug": "how-to-read-a-mutual-fund-factsheet",
+    "title": "How to Read a Mutual Fund Factsheet: Section by Section",
+    "topic": "How to read a mutual fund factsheet section by section",
+    "category": "mutual-funds",
+    "status": "queued",
+    "imageQuery": "magnifying glass paper charts",
+    "sources": [],
+    "outline": [
+      "What a factsheet is",
+      "Where to find it",
+      "The scheme basics",
+      "Portfolio and holdings",
+      "Performance and benchmark",
+      "Costs and risk"
+    ],
+    "facts": [
+      "A factsheet is a short monthly document published by a fund house that summarises a scheme.",
+      "SEBI requires fund houses to publish factsheets every month.",
+      "Factsheets are available on fund house websites and on AMFI's website.",
+      "A factsheet typically shows the scheme's category and investment objective, its NAV, its assets under management and details of the fund manager.",
+      "The portfolio section shows the largest holdings and the split across asset types and sectors.",
+      "Past performance is shown over different periods and compared with the scheme's benchmark index. Past performance does not guarantee future results.",
+      "The benchmark is the index against which the scheme's returns are compared, and it should suit the category of the scheme.",
+      "The expense ratio is shown as a yearly percentage of assets, and the exit load is listed.",
+      "The portfolio turnover ratio shows how actively the fund trades, and frequent trading adds costs inside the fund.",
+      "Risk measures such as standard deviation, beta and the Sharpe ratio may be shown. Beta shows how much a scheme moves relative to its benchmark, and the Sharpe ratio measures return above a risk-free rate relative to risk.",
+      "The riskometer is a SEBI-mandated colour-coded indicator of a scheme's risk, with six levels from Low to Very High.",
+      "A change of fund manager can change how a scheme is run, so the factsheet lists the manager and how long they have managed the scheme.",
+      "A factsheet shows the latest month, so an older factsheet will not show recent changes.",
+      "The factsheet is a summary. The scheme information document has the full terms."
+    ]
+  },
+  {
+    "slug": "open-ended-closed-ended-and-interval-funds",
+    "title": "Open-Ended, Close-Ended and Interval Funds: How They Differ",
+    "topic": "Open-ended, close-ended and interval mutual fund schemes: how they differ",
+    "category": "mutual-funds",
+    "status": "queued",
+    "imageQuery": "doors corridor",
+    "sources": [
+      "https://portal.amfiindia.com/spages/InvestorGuide.pdf"
+    ],
+    "outline": [
+      "Open-ended schemes",
+      "Close-ended schemes",
+      "Interval schemes",
+      "How buying and selling differ",
+      "What to check before investing"
+    ],
+    "facts": [
+      "Mutual fund schemes can be classified by structure into three types: open-ended, close-ended and interval.",
+      "An open-ended scheme is available for purchase and redemption on an ongoing basis and has no fixed maturity period. Its key feature is liquidity.",
+      "Open-ended schemes do not have to be listed on a stock exchange, and investors transact with the fund house at prices related to the NAV.",
+      "Because an open-ended scheme accepts purchases at any time, it allows regular investments such as a SIP.",
+      "A close-ended scheme has a stipulated maturity period, and units are offered during the new fund offer period.",
+      "SEBI regulations require close-ended schemes to be listed on a stock exchange so that investors have an exit route. After the offer, investors buy or sell units on the exchange.",
+      "The price of listed units on the exchange can differ from the NAV.",
+      "Some close-ended schemes also let investors sell units back to the fund house through periodic repurchase.",
+      "An interval scheme combines features of open-ended and close-ended schemes. It is open for purchase or redemption only during pre-specified intervals.",
+      "Units of an interval scheme must also be listed on a stock exchange.",
+      "Fixed maturity plans are close-ended schemes with a fixed tenure that matches the maturity of their investments.",
+      "SEBI has revised its scheme categorisation framework, so check the current categories in the scheme documents.",
+      "Before investing, check the scheme documents for when units can be bought or redeemed and for any exit load."
+    ]
+  },
+  {
+    "slug": "what-is-a-credit-score-in-india",
+    "title": "What Is a Credit Score in India and What Goes Into It?",
+    "topic": "What is a credit score in India and what goes into it",
+    "category": "credit-and-loans",
+    "status": "queued",
+    "imageQuery": "speedometer gauge",
+    "sources": [
+      "https://cibil.com/freecibilscore"
+    ],
+    "outline": [
+      "What a credit score is",
+      "What goes into the score",
+      "What is not in the score",
+      "How to check your score and report",
+      "Why errors and late payments matter"
+    ],
+    "facts": [
+      "A credit score is a three-digit number that summarises a person's credit history. In India it generally ranges from 300 to 900.",
+      "The CIBIL score is provided by TransUnion CIBIL. India has four credit bureaus: TransUnion CIBIL, Equifax, Experian and CRIF High Mark.",
+      "Credit bureaus are regulated by the RBI under the Credit Information Companies (Regulation) Act, 2005.",
+      "The score is calculated from information that lenders report to the bureau about loans and credit cards.",
+      "CIBIL says its score is calculated mainly from payment history, credit utilisation, age of credit and enquiries.",
+      "Payment history shows whether EMIs and credit card bills were paid on time and in full, and it is generally treated as the most important factor.",
+      "Credit utilisation is how much of the available credit limit is being used.",
+      "A credit enquiry is recorded when a lender checks a credit report in connection with a loan or card application.",
+      "Income and employment details may appear in a credit report, but the score is calculated from credit account and enquiry information, not from salary or employer.",
+      "A higher score generally signals lower risk to lenders, but each lender sets its own criteria and no score guarantees approval.",
+      "RBI guidelines entitle a person to one free full credit report, including the score, every calendar year from each credit bureau.",
+      "Checking your own report is treated as a soft enquiry and does not lower the score.",
+      "Lenders now report data to the bureaus more frequently than before under RBI directions, so recent payments appear in reports sooner.",
+      "Errors in a credit report can lower a score, and they can be raised with the credit bureau.",
+      "A missed payment can stay visible on a credit report for a period of time."
+    ]
   }
 ]
