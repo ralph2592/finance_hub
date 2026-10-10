@@ -1,5 +1,7 @@
 ---
+import '@fontsource-variable/source-serif-4/wght.css';
 import '../styles/global.css';
+import Logo from '../components/Logo.astro';
 import { SITE } from '../data/site';
 import { CATEGORIES } from '../data/categories';
 import { getPosts } from '../lib/posts';
@@ -42,11 +44,11 @@ const year = new Date().getFullYear();
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <header class="site-header">
-      <div class="wrap bar">
-        <a class="brand" href="/">{SITE.name}</a>
+    <header class="masthead">
+      <div class="wide bar">
+        <a class="brand" href="/"><Logo />{SITE.name}</a>
         {navCats.length > 0 && (
-          <nav aria-label="Topics">
+          <nav class="mnav" aria-label="Topics">
             <ul>
               {navCats.map((c) => <li><a href={`/category/${c.slug}/`}>{c.label}</a></li>)}
             </ul>
@@ -54,18 +56,39 @@ const year = new Date().getFullYear();
         )}
       </div>
     </header>
-    <main id="main" class="wrap">
+    <main id="main" class="wide">
       <slot />
     </main>
-    <footer class="site-footer">
-      <div class="wrap">
-        <ul>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="/privacy/">Privacy</a></li>
-          <li><a href="/disclaimer/">Disclaimer</a></li>
-          <li><a href="/editorial-policy/">Editorial policy</a></li>
-        </ul>
+    <slot name="bleed" />
+    <footer class="footer">
+      <div class="wide foot-grid">
+        <div>
+          <a class="brand" href="/"><Logo />{SITE.name}</a>
+          <p>Plain-language guides to money in India. Educational only, with no product recommendations.</p>
+        </div>
+        <nav aria-label="Topics">
+          <h2>Topics</h2>
+          <ul>
+            {navCats.map((c) => <li><a href={`/category/${c.slug}/`}>{c.label}</a></li>)}
+          </ul>
+        </nav>
+        <nav aria-label="About the site">
+          <h2>The site</h2>
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/editorial-policy/">Editorial policy</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Legal">
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/disclaimer/">Disclaimer</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="wide foot-base">
         <p>Educational information only. Not investment, tax, legal or insurance advice. Copyright {year} {SITE.name}.</p>
       </div>
     </footer>

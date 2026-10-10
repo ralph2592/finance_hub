@@ -53,41 +53,52 @@ const jsonLd = [
       <li><a href={`/category/${post.data.category}/`}>{catLabel}</a></li>
     </ol>
   </nav>
-  <article>
-    <h1>{post.data.title}</h1>
-    <p class="meta">
-      <span>Updated <time datetime={shown.toISOString()}>{fmtDate(shown)}</time></span>
-      <span>{readingMinutes(post.body)} min read</span>
-    </p>
+  <div class="article-grid">
+    <article>
+      <h1>{post.data.title}</h1>
+      <p class="meta">
+        <span>By {SITE.name}</span>
+        <span>Updated <time datetime={shown.toISOString()}>{fmtDate(shown)}</time></span>
+        <span>{readingMinutes(post.body)} min read</span>
+      </p>
+      {toc.length > 1 && (
+        <details class="toc-m">
+          <summary>On this page</summary>
+          <ul class="rows plain">
+            {toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
+          </ul>
+        </details>
+      )}
+      <AdSlot slot="after-intro" />
+      <div class="prose"><Content /></div>
+      <AdSlot slot="end-of-article" />
+      {post.data.sources.length > 0 && (
+        <section>
+          <h2>Sources</h2>
+          <ul>
+            {post.data.sources.map((s) => (
+              <li><a href={s} rel="noopener noreferrer">{new URL(s).hostname}</a></li>
+            ))}
+          </ul>
+        </section>
+      )}
+      <aside class="note">
+        <p>This guide is educational information. It is not investment, tax, legal or insurance advice, and it does not recommend any scheme, security or product. Check current rules and the official documents before you act.</p>
+      </aside>
+      {related.length > 0 && (
+        <section>
+          <h2>More in {catLabel}</h2>
+          <PostRows posts={related} />
+        </section>
+      )}
+    </article>
     {toc.length > 1 && (
-      <nav class="toc" aria-label="On this page">
+      <aside class="side" aria-label="On this page">
         <h2>On this page</h2>
-        <ul class="rows plain">
+        <ul>
           {toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
         </ul>
-      </nav>
+      </aside>
     )}
-    <AdSlot slot="after-intro" />
-    <div class="prose"><Content /></div>
-    <AdSlot slot="end-of-article" />
-    {post.data.sources.length > 0 && (
-      <section>
-        <h2>Sources</h2>
-        <ul>
-          {post.data.sources.map((s) => (
-            <li><a href={s} rel="noopener noreferrer">{new URL(s).hostname}</a></li>
-          ))}
-        </ul>
-      </section>
-    )}
-    <aside class="note">
-      <p>This guide is educational information. It is not investment, tax, legal or insurance advice, and it does not recommend any scheme, security or product. Check current rules and the official documents before you act.</p>
-    </aside>
-    {related.length > 0 && (
-      <section>
-        <h2>More in {catLabel}</h2>
-        <PostRows posts={related} />
-      </section>
-    )}
-  </article>
+  </div>
 </Base>

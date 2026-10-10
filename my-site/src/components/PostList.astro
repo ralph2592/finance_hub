@@ -1,0 +1,33 @@
+---
+import { fmtDate } from '../lib/posts';
+import { labelFor } from '../data/categories';
+const { posts, featured = false } = Astro.props;
+const lead = featured ? posts[0] : undefined;
+const rest = featured ? posts.slice(1) : posts;
+---
+{lead && (
+  <article class="feature">
+    <h3>
+      <a href={`/posts/${lead.id}/`}>{lead.data.title}</a>
+      {lead.data.draft && <span class="tag">Draft</span>}
+    </h3>
+    <p>{lead.data.description}</p>
+    <p class="post-meta">
+      <span>{labelFor(lead.data.category)}</span>
+      <time datetime={lead.data.date.toISOString()}>{fmtDate(lead.data.date)}</time>
+    </p>
+  </article>
+)}
+{rest.map((p) => (
+  <article class="post-row">
+    <h3>
+      <a href={`/posts/${p.id}/`}>{p.data.title}</a>
+      {p.data.draft && <span class="tag">Draft</span>}
+    </h3>
+    <p>{p.data.description}</p>
+    <p class="post-meta">
+      <span>{labelFor(p.data.category)}</span>
+      <time datetime={p.data.date.toISOString()}>{fmtDate(p.data.date)}</time>
+    </p>
+  </article>
+))}

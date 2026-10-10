@@ -1,34 +1,62 @@
 ---
 import Base from '../layouts/Base.astro';
-import PostRows from '../components/PostRows.astro';
+import PostList from '../components/PostList.astro';
+import TopicIcon from '../components/TopicIcon.astro';
 import { SITE } from '../data/site';
 import { CATEGORIES } from '../data/categories';
 import { getPosts } from '../lib/posts';
 
 const posts = await getPosts();
-const topics = CATEGORIES.filter((c) => posts.some((p) => p.data.category === c.slug));
-const latest = posts.slice(0, 12);
+const topics = CATEGORIES.map((c) => ({
+  ...c,
+  count: posts.filter((p) => p.data.category === c.slug).length,
+})).filter((c) => c.count > 0);
+const latest = posts.slice(0, 10);
 ---
 <Base title={SITE.name} description="Plain-language guides to mutual funds, insurance, credit and tax in India. Educational only, with no product recommendations.">
-  <section>
+  <section class="intro">
     <h1>{SITE.tagline}</h1>
-    <p class="lede">Guides to mutual funds, insurance, credit and tax. Each one explains how something works and what to check in the official document. We do not recommend products or promise returns.</p>
+    <p>Guides to mutual funds, insurance, credit and tax. Each one explains how something works and what to check in the official document. We do not recommend products or promise returns.</p>
   </section>
   {topics.length > 0 && (
     <section aria-labelledby="topics">
-      <h2 id="topics">Browse by topic</h2>
-      <ul class="rows topics">
+      <h2 class="section-title" id="topics">Topics</h2>
+      <ul class="tiles">
         {topics.map((c) => (
-          <li>
-            <a href={`/category/${c.slug}/`}>{c.label}</a>
-            <span class="muted">{c.blurb}</span>
+          <li class="tile">
+            <a href={`/category/${c.slug}/`}>
+              <TopicIcon slug={c.slug} />
+              <strong>{c.label}</strong>
+              <span>{c.blurb}</span>
+              <small>{c.count} {c.count === 1 ? 'guide' : 'guides'}</small>
+            </a>
           </li>
         ))}
       </ul>
     </section>
   )}
   <section aria-labelledby="latest">
-    <h2 id="latest">Latest guides</h2>
-    <PostRows posts={latest} />
+    <h2 class="section-title" id="latest">Latest guides</h2>
+    <PostList posts={latest} featured={true} />
+  </section>
+  <section slot="bleed" class="band" aria-labelledby="how">
+    <div class="wide">
+      <h2 class="section-title" id="how">How we write these guides</h2>
+      <ul class="how">
+        <li>
+          <h3>Sources first</h3>
+          <p>Facts come from AMFI, SEBI, IRDAI, RBI and the Income Tax Department, not from other blogs.</p>
+        </li>
+        <li>
+          <h3>Checked before publishing</h3>
+          <p>Drafts are screened by automated rules, then read by a person before they go live.</p>
+        </li>
+        <li>
+          <h3>No recommendations</h3>
+          <p>We explain how products work. We never tell you what to buy or promise returns.</p>
+        </li>
+      </ul>
+      <p class="more"><a href="/editorial-policy/">Read the editorial policy</a></p>
+    </div>
   </section>
 </Base>

@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import PostRows from '../../components/PostRows.astro';
+import PostList from '../../components/PostList.astro';
 import { CATEGORIES } from '../../data/categories';
 import { getPosts } from '../../lib/posts';
 
@@ -16,5 +16,5 @@ const { cat, posts } = Astro.props;
 <Base title={cat.label} description={cat.blurb}>
   <h1>{cat.label}</h1>
   <p class="lede">{cat.blurb}</p>
-  <PostRows posts={posts} />
+  <PostList posts={posts} />
 </Base>
