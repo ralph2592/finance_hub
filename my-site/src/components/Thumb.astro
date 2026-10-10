@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+const { src, sizes = '(min-width: 48rem) 12rem, 7.5rem', priority = false } = Astro.props;
+---
+<Image
+  src={src}
+  alt=""
+  widths={[240, 480]}
+  sizes={sizes}
+  loading={priority ? 'eager' : 'lazy'}
+  class="thumb"
+/>

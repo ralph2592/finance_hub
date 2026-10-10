@@ -1,7 +1,9 @@
 ---
 import { render } from 'astro:content';
+import { getImage } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import AdSlot from '../../components/AdSlot.astro';
+import Cover from '../../components/Cover.astro';
 import PostRows from '../../components/PostRows.astro';
 import { SITE } from '../../data/site';
 import { labelFor } from '../../data/categories';
@@ -23,6 +25,8 @@ const shown = post.data.updated ?? post.data.date;
 const toc = headings.filter((h) => h.depth === 2);
 const origin = Astro.site ? Astro.site.origin : '';
 const url = `${origin}/posts/${post.id}/`;
+const coverImg = post.data.cover ? await getImage({ src: post.data.cover, width: 1200 }) : undefined;
+const coverUrl = coverImg ? `${origin}${coverImg.src}` : undefined;
 const jsonLd = [
   {
     '@context': 'https://schema.org',
@@ -32,6 +36,7 @@ const jsonLd = [
     datePublished: post.data.date.toISOString(),
     dateModified: shown.toISOString(),
     mainEntityOfPage: url,
+    image: coverUrl,
     author: { '@type': 'Organization', name: SITE.name },
     publisher: { '@type': 'Organization', name: SITE.name },
   },
@@ -46,7 +51,7 @@ const jsonLd = [
   },
 ];
 ---
-<Base title={post.data.title} description={post.data.description} type="article" jsonLd={jsonLd}>
+<Base title={post.data.title} description={post.data.description} type="article" jsonLd={jsonLd} image={coverUrl}>
   <nav class="crumbs" aria-label="Breadcrumb">
     <ol>
       <li><a href="/">Home</a></li>
@@ -61,6 +66,9 @@ const jsonLd = [
         <span>Updated <time datetime={shown.toISOString()}>{fmtDate(shown)}</time></span>
         <span>{readingMinutes(post.body)} min read</span>
       </p>
+      {post.data.cover && (
+        <Cover src={post.data.cover} alt={post.data.coverAlt ?? ''} credit={post.data.coverCredit} priority={true} />
+      )}
       {toc.length > 1 && (
         <details class="toc-m">
           <summary>On this page</summary>

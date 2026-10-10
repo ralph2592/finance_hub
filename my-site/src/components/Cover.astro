@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+const { src, alt = '', credit, priority = false } = Astro.props;
+---
+<figure class="cover">
+  <Image
+    src={src}
+    alt={alt}
+    widths={[480, 800, 1200]}
+    sizes="(min-width: 66rem) 42rem, 100vw"
+    loading={priority ? 'eager' : 'lazy'}
+    fetchpriority={priority ? 'high' : 'auto'}
+  />
+  {credit && (
+    <figcaption>
+      Photo by {credit.profile ? <a href={credit.profile} rel="noopener noreferrer">{credit.name}</a> : credit.name} on <a href={credit.page} rel="noopener noreferrer">{credit.source ?? 'Pexels'}</a>
+    </figcaption>
+  )}
+</figure>

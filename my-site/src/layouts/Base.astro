@@ -12,8 +12,9 @@ interface Props {
   type?: 'website' | 'article';
   jsonLd?: object[];
   noindex?: boolean;
+  image?: string;
 }
-const { title, description, type = 'website', jsonLd = [], noindex = false } = Astro.props;
+const { title, description, type = 'website', jsonLd = [], noindex = false, image } = Astro.props;
 
 const siteNoindex = import.meta.env.PUBLIC_NOINDEX !== 'false';
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -22,6 +23,7 @@ const fullTitle = title === SITE.name ? `${SITE.name}: ${SITE.tagline}` : `${tit
 const posts = await getPosts();
 const navCats = CATEGORIES.filter((c) => posts.some((p) => p.data.category === c.slug));
 const year = new Date().getFullYear();
+const photoSources = [...new Set(posts.filter((p) => p.data.cover).map((p) => p.data.coverCredit?.source ?? 'Pexels'))];
 ---
 <!doctype html>
 <html lang="en">
@@ -38,7 +40,8 @@ const year = new Date().getFullYear();
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content={SITE.name} />
-    <meta name="twitter:card" content="summary" />
+    {image && <meta property="og:image" content={image} />}
+    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     {jsonLd.map((d) => <script type="application/ld+json" set:html={JSON.stringify(d)} />)}
   </head>
@@ -90,6 +93,7 @@ const year = new Date().getFullYear();
       </div>
       <div class="wide foot-base">
         <p>Educational information only. Not investment, tax, legal or insurance advice. Copyright {year} {SITE.name}.</p>
+        {photoSources.length > 0 && <p>Photos via {photoSources.join(' and ')}.</p>}
       </div>
     </footer>
   </body>

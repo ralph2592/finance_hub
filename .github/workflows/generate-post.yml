@@ -22,6 +22,11 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         run: node pipeline/generate.mjs --limit 1
+      - name: Add cover image
+        working-directory: my-site
+        env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: node pipeline/image.mjs --auto
       - name: Open pull request
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -34,7 +39,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH"
-          git add my-site/src/content/posts my-site/pipeline/topics.json
+          git add my-site/src/content/posts my-site/src/assets/posts my-site/pipeline/topics.json my-site/pipeline/used-images.json
           git commit -m "Add generated post draft"
           git push -u origin "$BRANCH"
           gh pr create --title "New post draft ($BRANCH)" \

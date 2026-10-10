@@ -5,6 +5,9 @@ date: 2026-10-10
 category: "mutual-funds"
 sources: []
 draft: false
+cover: "../../assets/posts/what-is-a-sip.jpg"
+coverAlt: ""
+coverCredit: {"name":"JessBaileyDesign","page":"https://pixabay.com/photos/notebook-desk-paper-desktop-3820634/","source":"Pixabay"}
 ---
 
 ## What a SIP is
