@@ -76,5 +76,107 @@
     ],
     "title": "Term Insurance vs Endowment Plans: Key Differences",
     "imageQuery": "paper documents pen desk"
+  },
+  {
+    "slug": "what-is-nav-in-mutual-funds",
+    "title": "What Is NAV in a Mutual Fund and How Is It Calculated?",
+    "topic": "What is NAV in a mutual fund and how is it calculated",
+    "category": "mutual-funds",
+    "status": "queued",
+    "imageQuery": "calculator spreadsheet desk",
+    "sources": [
+      "https://amfiindia.com/investor-corner/knowledge-center/net-asset-value.html",
+      "https://www.amfiindia.com/investor-corner/investor-center/Direct-Plan.html"
+    ],
+    "outline": [
+      "What NAV means",
+      "How NAV is calculated",
+      "When NAV is published",
+      "Which NAV applies to your purchase",
+      "What NAV does and does not tell you"
+    ],
+    "facts": [
+      "NAV stands for Net Asset Value and is the per-unit value of a mutual fund scheme.",
+      "NAV is calculated as the market value of the scheme's assets minus its liabilities, divided by the number of units outstanding.",
+      "Assets are valued at the closing market prices of the securities the scheme holds, so NAV changes from day to day as those prices change.",
+      "Unlike a share price, which moves during market hours, a scheme's NAV is declared at the end of each trading day after markets close.",
+      "Fund houses publish NAVs every business day on their own websites and on AMFI's website.",
+      "For most schemes, units are allotted at the prospective NAV, which is the NAV declared at the end of the day based on closing prices. Liquid and overnight funds follow different rules.",
+      "Which day NAV applies depends on the cut-off time and on when the money is available. An application received after the cut-off time gets the NAV of the next business day.",
+      "Cut-off times are set out in the scheme documents.",
+      "The number of units allotted is the amount invested divided by the NAV. For example, an investment of ₹10,000 at a NAV of ₹20 buys 500 units.",
+      "A fund with a NAV of ₹10 and a fund with a NAV of ₹50 that each rise by 10% give the same percentage gain, so a lower NAV does not mean a fund is cheaper.",
+      "NAV does not show how good a fund is. What matters is how the NAV changes over time and what the fund costs.",
+      "Scheme expenses are deducted from the scheme's assets, so they are reflected in the daily NAV and not billed separately.",
+      "Direct and regular plans of the same scheme have separate NAVs.",
+      "Mutual fund investments are subject to market risks, so read all scheme-related documents carefully."
+    ]
+  },
+  {
+    "slug": "direct-vs-regular-mutual-fund-plans",
+    "title": "Direct vs Regular Mutual Fund Plans: What the Difference Means",
+    "topic": "Direct versus regular mutual fund plans: what the difference means",
+    "category": "mutual-funds",
+    "status": "queued",
+    "imageQuery": "pen documents clipboard desk",
+    "sources": [
+      "https://www.amfiindia.com/investor-corner/investor-center/Direct-Plan.html"
+    ],
+    "outline": [
+      "What the two plans are",
+      "Why the costs differ",
+      "What stays the same",
+      "Separate NAVs and what that means",
+      "How to tell which plan you hold",
+      "Switching between plans"
+    ],
+    "facts": [
+      "Every mutual fund scheme can be held through a direct plan or a regular plan.",
+      "In a direct plan the investor invests without routing the investment through a distributor or agent. In a regular plan the investment is made with the help of a distributor or agent.",
+      "A direct plan and a regular plan belong to the same scheme, share the same portfolio and are managed by the same fund manager.",
+      "The two plans have different expense ratios, because a direct plan has no distribution cost or commission.",
+      "SEBI has noted that distribution expenses and commission cannot be charged to investors of a direct plan, so the direct plan has a lower expense ratio and the two plans show different returns.",
+      "Because the expense ratios differ, each plan has its own NAV, and the direct plan has the higher NAV.",
+      "AMFI notes that the difference between the two NAVs tends to be small.",
+      "Over time the lower cost of a direct plan can add to returns, and this difference keeps compounding.",
+      "AMFI describes direct plans as meant for investors who prefer to invest without a distributor's help, and regular plans as the route for investors who want guidance and assistance.",
+      "Banks commonly act as distributors, so investing through a bank is generally a regular plan and not a direct plan.",
+      "Regular plan investments are made under the distributor's AMFI registration number, known as an ARN.",
+      "Schemes show direct or regular in the plan name, and SEBI requires expenses and returns to be disclosed separately for direct and regular plans.",
+      "Moving from a regular plan to a direct plan can involve an exit load and tax on gains, so check the scheme documents and the current tax rules first.",
+      "The SEBI (Mutual Funds) Regulations, 2026 changed how expense limits are defined from 1 April 2026, so check the current expense ratio in the scheme documents."
+    ]
+  },
+  {
+    "slug": "what-is-expense-ratio-in-mutual-funds",
+    "title": "What Is an Expense Ratio in Mutual Funds and How Does It Work?",
+    "topic": "What is an expense ratio in mutual funds and how does it work",
+    "category": "mutual-funds",
+    "status": "queued",
+    "imageQuery": "calculator pen paperwork",
+    "sources": [],
+    "outline": [
+      "What an expense ratio is",
+      "What the 2026 rules changed",
+      "How the cost reaches you through NAV",
+      "Direct and regular plans",
+      "Where to find a scheme expense ratio"
+    ],
+    "facts": [
+      "An expense ratio is the yearly cost of running a mutual fund scheme, charged to the scheme's assets and shown as a percentage.",
+      "Investors do not get a separate bill. The expenses are reflected in the scheme's daily NAV.",
+      "The SEBI (Mutual Funds) Regulations, 2026 replaced the 1996 regulations, and the revised expense framework applies from 1 April 2026.",
+      "Under the new framework the Total Expense Ratio (TER) is the sum of the Base Expense Ratio (BER), brokerage, regulatory levies and statutory levies.",
+      "The BER is the capped base cost of running the scheme and excludes statutory and regulatory levies such as STT, GST, stamp duty, SEBI fees and exchange fees.",
+      "Statutory and regulatory levies on trades are charged at actuals, over and above the permitted brokerage limits.",
+      "SEBI also tightened the brokerage that a scheme may pay.",
+      "Part of the apparent fall in limits comes from statutory levies being moved outside the base figure, not from those costs disappearing.",
+      "Expense limits differ by scheme category and by the size of the scheme.",
+      "Schemes may choose a base expense ratio that varies with performance, subject to conditions set by SEBI.",
+      "Direct and regular plans of the same scheme have different expense ratios, and the direct plan is lower because it carries no distributor commission.",
+      "SEBI requires expenses to be disclosed separately for direct and regular plans.",
+      "Fund houses publish the current expense ratio of each scheme on their websites, so check the current figure there.",
+      "The expense ratio is one of several things to read in the scheme documents, along with the investment objective and the risk level."
+    ]
   }
 ]
