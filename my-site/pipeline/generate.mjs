@@ -69,13 +69,20 @@ function makeDescription(body) {
   return d;
 }
 
-function parse(text) {
-  const t = text.replace(/```(?:markdown|md)?/g, '').trim();
-  const tm = t.match(/^\W*TITLE:\s*\**\s*(.+)$/im);
-  const bi = t.indexOf('===BODY===');
-  if (!tm || bi === -1) throw new Error('output format not recognised');
-  const title = tm[1].replace(/\*+/g, '').trim();
-  const body = t.slice(bi + '===BODY==='.length).trim();
+function parse(text, t) {
+  const clean = text.replace(/```(?:markdown|md)?/g, '').trim();
+  const tm = clean.match(/^\W*TITLE:\s*\**\s*(.+)$/im);
+  const bi = clean.indexOf('===BODY===');
+  let body;
+  if (bi !== -1) {
+    body = clean.slice(bi + '===BODY==='.length).trim();
+  } else {
+    const h = clean.search(/^##\s/m);
+    if (h === -1) throw new Error('output format not recognised');
+    body = clean.slice(h).trim();
+  }
+  const title = (t && t.title) || (tm ? tm[1].replace(/\*+/g, '').trim() : '');
+  if (title === '') throw new Error('output format not recognised');
   return { title, description: makeDescription(body), body };
 }
 
@@ -129,7 +136,7 @@ async function attempt(t, feedback = '') {
     : base;
   const raw = await callModel(SYSTEM, prompt);
   try {
-    const post = parse(raw);
+    const post = parse(raw, t);
     post.body = stripFiller(post.body);
     post.description = makeDescription(post.body);
     return { raw, post, errs: check(post, t) };

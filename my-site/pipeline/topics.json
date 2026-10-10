@@ -41,13 +41,16 @@
     "slug": "term-plan-vs-endowment-plan",
     "topic": "Term insurance versus endowment plans: the basic difference",
     "category": "insurance",
-    "status": "queued",
+    "status": "done",
     "sources": [],
     "outline": [
       "What a term plan is",
       "What an endowment plan is",
       "The key differences",
-      "What to compare before buying"
+      "Premiums and what they depend on",
+      "Benefits, bonuses and early exit",
+      "What to compare before buying",
+      "Disclosure, nominees and claims"
     ],
     "facts": [
       "A pure term plan pays the sum assured to the nominee if the policyholder dies during the policy term; it pays nothing if the policyholder survives the term.",
@@ -59,7 +62,16 @@
       "Exclusions and conditions differ by insurer and are listed in the policy document.",
       "Health and lifestyle details must be disclosed accurately at purchase, since non-disclosure can lead to a claim being rejected.",
       "Insurers in India are regulated by the IRDAI.",
-      "Insurance needs differ by person; this article is educational and not a recommendation of any plan."
+      "Insurance needs differ by person; this article is educational and not a recommendation of any plan.",
+      "This article compares two kinds of life insurance plan: term plans and endowment plans.",
+      "A term plan premium depends on factors such as the policyholder age, the sum assured, the policy term and the insurer assessment of health and lifestyle.",
+      "The policy term and the premium payment term can differ in some plans, so check both in the policy document.",
+      "Surrendering an endowment plan before maturity can return less than the premiums paid, depending on the surrender terms in the policy.",
+      "The claim settlement ratio is a published figure showing the share of claims an insurer settled in a year, and it does not predict how any individual claim will be treated.",
+      "The policyholder names a nominee to receive the benefit, and nominee details can be updated as circumstances change.",
+      "Riders such as accidental death or critical illness cover can be added to some plans for an additional premium, and the available riders differ by insurer and plan.",
+      "Tax treatment of premiums and benefits depends on the rules in force at the time, which change, so check the current rules.",
+      "A free-look period lets a policyholder review a new policy and return it if the terms are not acceptable, subject to the insurer rules."
     ],
     "title": "Term Insurance vs Endowment Plans: Key Differences"
   }
