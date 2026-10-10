@@ -3,26 +3,64 @@
     "slug": "what-is-a-sip",
     "topic": "What is a systematic investment plan (SIP) and how does it work",
     "category": "mutual-funds",
-    "status": "failed",
+    "status": "done",
     "sources": [],
-    "facts": [
-      "A SIP invests a fixed amount in a mutual fund at regular intervals, such as monthly.",
-      "Investing at fixed intervals means more units are bought when prices are low and fewer when prices are high, which is called rupee cost averaging.",
-      "Mutual fund returns are not guaranteed and the NAV can fall as well as rise."
+    "outline": [
+      "What a SIP is",
+      "How a SIP works step by step",
+      "Rupee cost averaging: what it does and does not do",
+      "SIP versus lump sum investing",
+      "Costs, lock-ins and rules to check",
+      "What happens if an instalment fails",
+      "Where to check scheme details"
     ],
-    "note": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
+    "facts": [
+      "A SIP is a method of investing a fixed amount in a mutual fund scheme at regular intervals, such as monthly. It is not a separate product.",
+      "The investor chooses the scheme, the amount, the date and the frequency, and sets up an auto-debit instruction (mandate) with their bank.",
+      "On each date the amount buys units at that day's net asset value (NAV), so more units are allotted when the NAV is low and fewer when it is high.",
+      "This averaging of purchase cost is called rupee cost averaging. It reduces dependence on picking a single entry point but does not protect against losses or guarantee returns.",
+      "Mutual fund returns are not guaranteed and the NAV can fall as well as rise.",
+      "Minimum SIP amounts and available frequencies differ by fund house and scheme, so check the scheme documents.",
+      "Most open-ended funds have no lock-in, but ELSS tax-saving funds carry a 3-year lock-in that applies separately to each SIP instalment.",
+      "Some schemes charge an exit load if units are redeemed within a period set by the scheme, so check the scheme documents.",
+      "Gains are taxed under the rules in force at the time of redemption, and these rules change, so check the current rules.",
+      "KYC verification is required before investing in mutual funds.",
+      "Investors can usually pause or stop a SIP, subject to the fund house's rules and notice periods.",
+      "The right scheme depends on the investor's time horizon and risk tolerance.",
+      "A lump sum investment buys units at a single NAV on one date, while a SIP spreads purchases across several dates.",
+      "If a SIP instalment cannot be debited because the bank account has insufficient balance, that instalment is not invested, and the bank may charge a fee for the failed debit.",
+      "Fund houses may cancel a SIP after repeated failed debits, according to their own rules.",
+      "If a SIP date falls on a holiday, the instalment is typically processed on the next business day.",
+      "Direct plans and regular plans of the same scheme differ in expenses, because regular plans include a distributor commission.",
+      "Mutual funds in India are regulated by SEBI, and AMFI publishes NAVs and investor information.",
+      "The scheme information document and the fact sheet list the investment objective, expenses, exit load and risk level of a scheme."
+    ],
+    "title": "What Is a SIP and How Does It Work?"
   },
   {
     "slug": "term-plan-vs-endowment-plan",
     "topic": "Term insurance versus endowment plans: the basic difference",
     "category": "insurance",
-    "status": "failed",
+    "status": "queued",
     "sources": [],
-    "facts": [
-      "A pure term plan pays a death benefit only if the policyholder dies during the policy term.",
-      "An endowment plan combines life cover with savings and pays a maturity benefit if the policyholder survives the term.",
-      "Readers should compare the cover amount, premium and exclusions in the policy document before buying."
+    "outline": [
+      "What a term plan is",
+      "What an endowment plan is",
+      "The key differences",
+      "What to compare before buying"
     ],
-    "note": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
+    "facts": [
+      "A pure term plan pays the sum assured to the nominee if the policyholder dies during the policy term; it pays nothing if the policyholder survives the term.",
+      "An endowment plan combines life cover with savings: it pays a death benefit during the term and a maturity benefit if the policyholder survives.",
+      "Because part of an endowment premium goes to the savings component, premiums are generally higher than for a pure term plan with the same life cover.",
+      "Some term plans offer a return of premium option, which raises the premium.",
+      "In traditional endowment plans, only part of the maturity amount may be guaranteed; bonuses, where offered, are not guaranteed.",
+      "Compare the sum assured, policy term, premium payment term, exclusions, and the insurer's claim settlement record.",
+      "Exclusions and conditions differ by insurer and are listed in the policy document.",
+      "Health and lifestyle details must be disclosed accurately at purchase, since non-disclosure can lead to a claim being rejected.",
+      "Insurers in India are regulated by the IRDAI.",
+      "Insurance needs differ by person; this article is educational and not a recommendation of any plan."
+    ],
+    "title": "Term Insurance vs Endowment Plans: Key Differences"
   }
 ]
