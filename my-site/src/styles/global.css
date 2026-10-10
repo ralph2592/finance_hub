@@ -42,7 +42,8 @@ h2 { font-size: 1.35rem; margin: 2.4rem 0 0.6rem; }
 h3 { font-size: 1.15rem; margin: 1.8rem 0 0.4rem; }
 .lede { color: var(--muted); margin: 0 0 1.5rem; }
 
-.site-header .bar { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1.4rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+.site-header { border-bottom: 1px solid var(--rule); }
+.site-header .bar { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1.4rem; padding-block: 1rem; }
 .brand { font: 700 1.2rem var(--sans); color: var(--ink); text-decoration: none; }
 .site-header nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; margin: 0; padding: 0; }
 .site-header nav a { font: 0.95rem var(--sans); color: var(--muted); text-decoration: none; }
@@ -84,3 +85,10 @@ h3 { font-size: 1.15rem; margin: 1.8rem 0 0.4rem; }
 .site-footer ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; padding: 0; margin: 0 0 0.8rem; }
 .site-footer a { color: var(--muted); }
 .site-footer p { margin: 0; }
+
+/* v1.1 fixes */
+.site-header { border-bottom: 1px solid var(--rule); }
+.site-header .bar { border-bottom: 0; padding-block: 1rem; padding-inline: 1rem; }
+h1, h2 { text-wrap: balance; }
+.rows.plain li { padding: 0.3rem 0; }
+.toc a { font-size: 0.95rem; }
