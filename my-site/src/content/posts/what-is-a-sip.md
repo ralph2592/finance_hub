@@ -4,7 +4,7 @@ description: "A systematic investment plan (SIP) is a method of investing a fixe
 date: 2026-10-10
 category: "mutual-funds"
 sources: []
-draft: true
+draft: false
 ---
 
 ## What a SIP is

@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 
-const posts = (await getCollection('posts', ({ data }) => !data.draft))
+const posts = (await getCollection('posts', ({ data }) => (import.meta.env.DEV || data.draft === false)))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <Base title="Finance Hub" description="Latest posts from Finance Hub.">
