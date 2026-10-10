@@ -5,6 +5,9 @@ date: 2026-10-10
 category: "insurance"
 sources: []
 draft: true
+cover: "../../assets/posts/term-plan-vs-endowment-plan.jpg"
+coverAlt: ""
+coverCredit: {"name":"AymaneJed","page":"https://pixabay.com/photos/laptop-office-hand-writing-3196481/","source":"Pixabay"}
 ---
 
 ## What a term plan is
