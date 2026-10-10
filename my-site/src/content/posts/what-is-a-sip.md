@@ -25,5 +25,3 @@ Before investing in a SIP, it is crucial to check the scheme documents for minim
 ## What happens if an instalment fails
 If a SIP instalment cannot be debited because the bank account has insufficient balance, that instalment is not invested, and the bank may charge a fee for the failed debit. Fund houses may cancel a SIP after repeated failed debits, according to their own rules. If a SIP date falls on a holiday, the instalment is typically processed on the next business day.
 
-## Where to check scheme details
-To find out more about a specific mutual fund scheme, investors can check the scheme information document and the fact sheet, which list the investment objective, expenses, exit load, and risk level of a scheme. Mutual funds in India are regulated by SEBI, and AMFI publishes NAVs and investor information. Direct plans and regular plans of the same scheme differ in expenses, because regular plans include a distributor commission. Investors can also pause or stop a SIP, subject to the fund house's rules and notice periods, after completing the necessary KYC verification.
