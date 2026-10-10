@@ -1,21 +1,93 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import PostRows from '../../components/PostRows.astro';
+import { SITE } from '../../data/site';
+import { labelFor } from '../../data/categories';
+import { getPosts, fmtDate, readingMinutes } from '../../lib/posts';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('posts', ({ data }) => (import.meta.env.DEV || data.draft === false));
+  const posts = await getPosts();
   return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+const all = await getPosts();
+const related = all
+  .filter((p) => p.id !== post.id && p.data.category === post.data.category)
+  .slice(0, 3);
+const catLabel = labelFor(post.data.category);
+const shown = post.data.updated ?? post.data.date;
+const toc = headings.filter((h) => h.depth === 2);
+const origin = Astro.site ? Astro.site.origin : '';
+const url = `${origin}/posts/${post.id}/`;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.data.title,
+    description: post.data.description,
+    datePublished: post.data.date.toISOString(),
+    dateModified: shown.toISOString(),
+    mainEntityOfPage: url,
+    author: { '@type': 'Organization', name: SITE.name },
+    publisher: { '@type': 'Organization', name: SITE.name },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${origin}/` },
+      { '@type': 'ListItem', position: 2, name: catLabel, item: `${origin}/category/${post.data.category}/` },
+      { '@type': 'ListItem', position: 3, name: post.data.title, item: url },
+    ],
+  },
+];
 ---
-<Base title={post.data.title} description={post.data.description}>
+<Base title={post.data.title} description={post.data.description} type="article" jsonLd={jsonLd}>
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href={`/category/${post.data.category}/`}>{catLabel}</a></li>
+    </ol>
+  </nav>
   <article>
     <h1>{post.data.title}</h1>
-    <time datetime={post.data.date.toISOString()}>
-      {post.data.date.toLocaleDateString('en-IN')}
-    </time>
-    <Content />
+    <p class="meta">
+      <span>Updated <time datetime={shown.toISOString()}>{fmtDate(shown)}</time></span>
+      <span>{readingMinutes(post.body)} min read</span>
+    </p>
+    {toc.length > 1 && (
+      <nav class="toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ul class="rows plain">
+          {toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
+        </ul>
+      </nav>
+    )}
+    <AdSlot slot="after-intro" />
+    <div class="prose"><Content /></div>
+    <AdSlot slot="end-of-article" />
+    {post.data.sources.length > 0 && (
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          {post.data.sources.map((s) => (
+            <li><a href={s} rel="noopener noreferrer">{new URL(s).hostname}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+    <aside class="note">
+      <p>This guide is educational information. It is not investment, tax, legal or insurance advice, and it does not recommend any scheme, security or product. Check current rules and the official documents before you act.</p>
+    </aside>
+    {related.length > 0 && (
+      <section>
+        <h2>More in {catLabel}</h2>
+        <PostRows posts={related} />
+      </section>
+    )}
   </article>
 </Base>

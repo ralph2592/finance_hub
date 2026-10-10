@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE, placeholdersLeft } from '../data/site';
+---
+<Base title="Contact" description={`How to contact ${SITE.name}, including how to report an error.`} noindex={placeholdersLeft}>
+  <h1>Contact</h1>
+  <div class="prose">
+    <p>Email <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+    <p>To report an error, include the page address, the sentence you think is wrong and, if you can, a link to the official source. Corrections are made as soon as they are checked, and the page date is updated.</p>
+    <p>We cannot give personal financial, tax or insurance advice.</p>
+  </div>
+</Base>

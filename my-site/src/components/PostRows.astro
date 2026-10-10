@@ -1,0 +1,15 @@
+---
+import { fmtDate } from '../lib/posts';
+const { posts } = Astro.props;
+---
+<ul class="rows">
+  {posts.map((p) => (
+    <li>
+      <span>
+        <a href={`/posts/${p.id}/`}>{p.data.title}</a>
+        {p.data.draft && <span class="tag">Draft</span>}
+      </span>
+      <time datetime={p.data.date.toISOString()}>{fmtDate(p.data.date)}</time>
+    </li>
+  ))}
+</ul>

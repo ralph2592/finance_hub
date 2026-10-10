@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostRows from '../../components/PostRows.astro';
+import { CATEGORIES } from '../../data/categories';
+import { getPosts } from '../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return CATEGORIES.filter((c) => posts.some((p) => p.data.category === c.slug)).map((c) => ({
+    params: { slug: c.slug },
+    props: { cat: c, posts: posts.filter((p) => p.data.category === c.slug) },
+  }));
+}
+const { cat, posts } = Astro.props;
+---
+<Base title={cat.label} description={cat.blurb}>
+  <h1>{cat.label}</h1>
+  <p class="lede">{cat.blurb}</p>
+  <PostRows posts={posts} />
+</Base>

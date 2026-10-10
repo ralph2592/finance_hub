@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE, placeholdersLeft } from '../data/site';
+---
+<Base title="Privacy policy" description={`How ${SITE.name} handles visitor data, cookies and advertising.`} noindex={placeholdersLeft}>
+  <h1>Privacy policy</h1>
+  <div class="prose">
+    <p>Last updated 10 October 2026.</p>
+    <h2>What we collect</h2>
+    <p>This site does not ask you to create an account or enter personal details. Our hosting provider, Cloudflare, processes standard request data such as your IP address and browser type to deliver pages and protect the site.</p>
+    <h2>Analytics</h2>
+    <p>If we turn on an analytics tool, we will name it here and describe what it records.</p>
+    <h2>Cookies and advertising</h2>
+    <p>When advertising is enabled, third-party vendors, including Google, use cookies to serve and measure ads based on your visits to this and other sites. You can manage personalised advertising at adssettings.google.com, or opt out of some third-party vendors' use of cookies at aboutads.info.</p>
+    <h2>Your requests</h2>
+    <p>To ask about data we hold about you, or to ask us to delete it, email <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+    <h2>Changes</h2>
+    <p>We will update this page and its date when our practices change.</p>
+  </div>
+</Base>

@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE, placeholdersLeft } from '../data/site';
+---
+<Base title="Editorial policy" description={`How ${SITE.name} chooses sources, checks facts and handles corrections.`} noindex={placeholdersLeft}>
+  <h1>Editorial policy</h1>
+  <div class="prose">
+    <h2>Sources</h2>
+    <p>Facts come from primary sources where possible: AMFI, SEBI, IRDAI, RBI, the Income Tax Department and the official documents of schemes and policies. Where a figure changes often, the guide tells you to check the current figure at the source.</p>
+    <h2>How guides are written</h2>
+    <p>Guides are drafted by an AI writing tool from a written brief of verified facts, then checked by automated rules and read by a person before publication.</p>
+    <h2>Updates and corrections</h2>
+    <p>Each guide shows the date it was last updated. If you find an error, <a href="/contact/">contact us</a>. We correct confirmed errors and update the date.</p>
+    <h2>Independence</h2>
+    <p>Guides do not contain paid placements. If that changes, the affected pages will say so clearly.</p>
+  </div>
+</Base>

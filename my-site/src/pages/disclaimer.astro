@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE, placeholdersLeft } from '../data/site';
+---
+<Base title="Disclaimer" description={`${SITE.name} publishes educational information only. Read what that means.`} noindex={placeholdersLeft}>
+  <h1>Disclaimer</h1>
+  <div class="prose">
+    <p>{SITE.name} publishes general educational information. Nothing here is investment, tax, legal or insurance advice, and nothing here recommends any security, mutual fund scheme, insurer or product.</p>
+    <p>{SITE.owner} is not registered with SEBI as an investment adviser or research analyst.</p>
+    <p>Returns on market-linked products are not guaranteed, and values can fall as well as rise. Rules, rates and limits change. Check the current rules and read the official scheme or policy documents before you act, and speak to a qualified professional about your own situation.</p>
+    <p>We try to keep every page accurate and dated, but we cannot guarantee that it is complete or current.</p>
+  </div>
+</Base>

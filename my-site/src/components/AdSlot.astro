@@ -1,0 +1,9 @@
+---
+const on = import.meta.env.PUBLIC_ADS === 'true';
+const { slot = 'auto' } = Astro.props;
+---
+{on && (
+  <aside class="ad" aria-label="Advertisement" data-slot={slot}>
+    <span>Advertisement</span>
+  </aside>
+)}
