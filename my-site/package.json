@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "generate": "node pipeline/generate.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "what-is-a-sip",
+    "topic": "What is a systematic investment plan (SIP) and how does it work",
+    "category": "mutual-funds",
+    "status": "failed",
+    "sources": [],
+    "facts": [
+      "A SIP invests a fixed amount in a mutual fund at regular intervals, such as monthly.",
+      "Investing at fixed intervals means more units are bought when prices are low and fewer when prices are high, which is called rupee cost averaging.",
+      "Mutual fund returns are not guaranteed and the NAV can fall as well as rise."
+    ],
+    "note": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
+  },
+  {
+    "slug": "term-plan-vs-endowment-plan",
+    "topic": "Term insurance versus endowment plans: the basic difference",
+    "category": "insurance",
+    "status": "failed",
+    "sources": [],
+    "facts": [
+      "A pure term plan pays a death benefit only if the policyholder dies during the policy term.",
+      "An endowment plan combines life cover with savings and pays a maturity benefit if the policyholder survives the term.",
+      "Readers should compare the cover amount, premium and exclusions in the policy document before buying."
+    ],
+    "note": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
+  }
+]
