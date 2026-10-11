@@ -32,7 +32,7 @@ TITLE: <20-100 characters>
 <markdown body>`;
 
 const NUMWORDS = /\b(two|three|four|five|six|seven|eight|nine|ten|twenty|thirty|forty|fifty|hundred|thousand|lakh|crore|million|billion|percent)\b/g;
-const BANNED = ['in conclusion', 'it is important to note', 'it is essential', 'numerous', 'you should', 'afford to lose', 'delve', 'informed decisions', 'disciplined', 'by understanding'];
+const BANNED = ['in conclusion', 'it is important to note', 'it is essential', 'numerous', 'you should', 'afford to lose', 'delve', 'informed decisions', 'disciplined', 'by understanding', 'we recommend', 'best fund', 'top fund', 'risk-free', 'assured returns', 'safe investment', 'you must', 'high returns'];
 
 const numbersIn = (text) =>
   (text.replace(/^\s*\d+[.)]\s/gm, '').match(/\d[\d,]*(?:\.\d+)?%?/g) || []).map((s) => s.replace(/,+$/, ''));
@@ -129,6 +129,15 @@ function stripFiller(body) {
     .join('\n');
 }
 
+async function unsupportedClaims(body, facts) {
+  if (process.env.VERIFY === 'off') return [];
+  const sys = 'You are a strict fact checker. You are given FACTS and an ARTICLE. List every sentence in the ARTICLE that states a rule, number, date, name or factual claim that is NOT supported by FACTS. Widely known plain-language definitions are allowed. Quote each unsupported sentence exactly, one per line, with no commentary. If every claim is supported, reply with exactly: NONE';
+  const prompt = 'FACTS:\n' + facts.map((f) => '- ' + f).join('\n') + '\n\nARTICLE:\n' + body;
+  const out = (await callModel(sys, prompt)).trim();
+  if (/^none\b/i.test(out)) return [];
+  return out.split('\n').map((s) => s.trim()).filter(Boolean).slice(0, 4);
+}
+
 async function attempt(t, feedback = '') {
   const base = `TOPIC: ${t.topic}\nCATEGORY: ${t.category}\nOUTLINE:\n${(t.outline || []).map((h) => `- ${h}`).join('\n')}\nFACTS:\n${t.facts.map((f) => `- ${f}`).join('\n')}`;
   const prompt = feedback
@@ -139,14 +148,19 @@ async function attempt(t, feedback = '') {
     const post = parse(raw, t);
     post.body = stripFiller(post.body);
     post.description = makeDescription(post.body);
-    return { raw, post, errs: check(post, t) };
+    const errs = check(post, t);
+    if (errs.length === 0) {
+      const bad = await unsupportedClaims(post.body, t.facts);
+      if (bad.length > 0) errs.push('claims not supported by the facts (remove or reword them): ' + bad.join(' | '));
+    }
+    return { raw, post, errs };
   } catch (e) {
     return { raw, errs: [e.message] };
   }
 }
 
 const topics = JSON.parse(await fs.readFile(TOPICS, 'utf8'));
-const queued = topics.filter((t) => t.status === 'queued');
+const queued = topics.filter((t) => t.status === 'queued' && t.verified !== false);
 let written = 0;
 let failures = 0;
 await fs.mkdir(POSTS, { recursive: true });
