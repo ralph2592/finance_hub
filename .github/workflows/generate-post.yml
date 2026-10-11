@@ -5,12 +5,11 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
-  pull-requests: write
 concurrency: generate-post
 jobs:
   generate:
     if: ${{ vars.PIPELINE_PAUSED != 'true' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -21,26 +20,27 @@ jobs:
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          PUBLISH: 'true'
         run: node pipeline/generate.mjs --limit 1
       - name: Add cover image
         working-directory: my-site
         env:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: node pipeline/image.mjs --auto
-      - name: Open pull request
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build check
+        working-directory: my-site
         run: |
-          if [ -z "$(git status --porcelain my-site/src/content/posts)" ]; then
-            echo "No new post written, nothing to commit."
+          npm ci
+          npm run build
+      - name: Commit and publish
+        run: |
+          if [ -z "$(git status --porcelain my-site/src my-site/pipeline)" ]; then
+            echo "Nothing new to publish."
             exit 0
           fi
-          BRANCH="post/$(date +%Y%m%d-%H%M)"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -b "$BRANCH"
           git add my-site/src/content/posts my-site/src/assets/posts my-site/pipeline/topics.json my-site/pipeline/used-images.json
-          git commit -m "Add generated post draft"
-          git push -u origin "$BRANCH"
-          gh pr create --title "New post draft ($BRANCH)" \
-            --body "Generated draft. Read it, fix anything wrong, set draft: false to publish, then merge."
+          git commit -m "Pipeline run: publish generated post and update queue"
+          git pull --rebase origin main
+          git push origin HEAD:main
