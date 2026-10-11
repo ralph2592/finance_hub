@@ -146,11 +146,14 @@ async function attempt(t, feedback = '') {
 }
 
 const topics = JSON.parse(await fs.readFile(TOPICS, 'utf8'));
-const queued = topics.filter((t) => t.status === 'queued').slice(0, LIMIT);
+const queued = topics.filter((t) => t.status === 'queued');
+let written = 0;
+let failures = 0;
 await fs.mkdir(POSTS, { recursive: true });
 await fs.mkdir(REJECTED, { recursive: true });
 
 for (const t of queued) {
+  if (written >= LIMIT || failures >= 3) break;
   const file = path.join(POSTS, `${t.slug}.md`);
   if (await exists(file)) {
     t.status = 'skipped';
@@ -187,10 +190,12 @@ for (const t of queued) {
 
     await fs.writeFile(file, md, 'utf8');
     t.status = 'done';
+    written++;
     delete t.note;
     console.log(`wrote ${t.slug} (${post.body.split(/\s+/).length} words, draft=${!PUBLISH})`);
   } catch (e) {
     t.status = 'failed';
+    failures++;
     t.note = e.message;
     console.error(`failed ${t.slug}: ${e.message}`);
   }

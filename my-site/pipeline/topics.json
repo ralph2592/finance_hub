@@ -74,15 +74,14 @@
       "Tax treatment of premiums and benefits depends on the rules in force at the time, which change, so check the current rules.",
       "A free-look period lets a policyholder review a new policy and return it if the terms are not acceptable, subject to the insurer rules."
     ],
-    "title": "Term Insurance vs Endowment Plans: Key Differences",
-    "imageQuery": "paper documents pen desk"
+    "title": "Term Insurance vs Endowment Plans: Key Differences"
   },
   {
     "slug": "what-is-nav-in-mutual-funds",
     "title": "What Is NAV in a Mutual Fund and How Is It Calculated?",
     "topic": "What is NAV in a mutual fund and how is it calculated",
     "category": "mutual-funds",
-    "status": "queued",
+    "status": "hold",
     "imageQuery": "calculator spreadsheet desk",
     "sources": [
       "https://amfiindia.com/investor-corner/knowledge-center/net-asset-value.html",
@@ -91,6 +90,7 @@
     "outline": [
       "What NAV means",
       "How NAV is calculated",
+      "A worked example",
       "When NAV is published",
       "Which NAV applies to your purchase",
       "What NAV does and does not tell you"
@@ -109,7 +109,12 @@
       "NAV does not show how good a fund is. What matters is how the NAV changes over time and what the fund costs.",
       "Scheme expenses are deducted from the scheme's assets, so they are reflected in the daily NAV and not billed separately.",
       "Direct and regular plans of the same scheme have separate NAVs.",
-      "Mutual fund investments are subject to market risks, so read all scheme-related documents carefully."
+      "Mutual fund investments are subject to market risks, so read all scheme-related documents carefully.",
+      "For example, a scheme with assets worth ₹110 crore, liabilities of ₹10 crore and 10 crore units outstanding has a NAV of ₹10, because ₹110 crore minus ₹10 crore is ₹100 crore, and ₹100 crore divided by 10 crore units is ₹10.",
+      "If the NAV later rises from ₹20 to ₹22, 500 units that were worth ₹10,000 are then worth ₹11,000.",
+      "The NAV can also fall, in which case the same units are worth less than the amount invested.",
+      "The NAV is quoted per unit, so it does not show the size of a scheme. Assets under management show that.",
+      "On redemption, the amount paid is the number of units multiplied by the applicable NAV, less any exit load."
     ]
   },
   {
