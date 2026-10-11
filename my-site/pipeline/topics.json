@@ -82,7 +82,7 @@
     "title": "What Is NAV in a Mutual Fund and How Is It Calculated?",
     "topic": "What is NAV in a mutual fund and how is it calculated",
     "category": "mutual-funds",
-    "status": "queued",
+    "status": "failed",
     "imageQuery": "calculator spreadsheet desk",
     "sources": [
       "https://amfiindia.com/investor-corner/knowledge-center/net-asset-value.html",
@@ -110,7 +110,8 @@
       "Scheme expenses are deducted from the scheme's assets, so they are reflected in the daily NAV and not billed separately.",
       "Direct and regular plans of the same scheme have separate NAVs.",
       "Mutual fund investments are subject to market risks, so read all scheme-related documents carefully."
-    ]
+    ],
+    "note": "rejected after 3 tries: body is 378 words, must be at least 450; repetitive text (3.6% repeated phrases)"
   },
   {
     "slug": "direct-vs-regular-mutual-fund-plans",
