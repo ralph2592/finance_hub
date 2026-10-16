@@ -157,7 +157,7 @@
     "title": "What Is an Expense Ratio in Mutual Funds and How Does It Work?",
     "topic": "What is an expense ratio in mutual funds and how does it work",
     "category": "mutual-funds",
-    "status": "queued",
+    "status": "failed",
     "imageQuery": "calculator pen paperwork",
     "sources": [],
     "outline": [
@@ -182,14 +182,15 @@
       "SEBI requires expenses to be disclosed separately for direct and regular plans.",
       "Fund houses publish the current expense ratio of each scheme on their websites, so check the current figure there.",
       "The expense ratio is one of several things to read in the scheme documents, along with the investment objective and the risk level."
-    ]
+    ],
+    "note": "rejected after 3 tries: body is 430 words, must be at least 450"
   },
   {
     "slug": "sip-vs-lump-sum-investing",
     "title": "SIP vs Lump Sum Investing: How the Two Methods Differ",
     "topic": "SIP versus lump sum investing: how the methods differ",
     "category": "mutual-funds",
-    "status": "queued",
+    "status": "failed",
     "imageQuery": "calendar planner desk",
     "sources": [],
     "outline": [
@@ -213,14 +214,15 @@
       "For example, ₹12,000 can be invested as one payment of ₹12,000 or as 12 instalments of ₹1,000. The total is the same, but the purchase dates and NAVs differ.",
       "Neither method guarantees returns, and the NAV can fall as well as rise.",
       "Which method fits depends on when the money is available and how long it will stay invested, and this differs for each investor."
-    ]
+    ],
+    "note": "rejected after 3 tries: body is 443 words, must be at least 450"
   },
   {
     "slug": "exit-load-in-mutual-funds",
     "title": "What Is an Exit Load in Mutual Funds and When Does It Apply?",
     "topic": "What is an exit load in mutual funds and when does it apply",
     "category": "mutual-funds",
-    "status": "queued",
+    "status": "failed",
     "imageQuery": "exit sign green",
     "sources": [],
     "outline": [
@@ -245,7 +247,8 @@
       "The exit load is separate from the expense ratio, which is charged yearly through the NAV.",
       "Liquid and overnight schemes can have a graded exit load for redemptions within a very short period.",
       "A scheme can change its exit load through an addendum, so check the current exit load in the scheme documents or the factsheet before redeeming."
-    ]
+    ],
+    "note": "rejected after 3 tries: body is 398 words, must be at least 450"
   },
   {
     "slug": "kyc-for-mutual-funds",
