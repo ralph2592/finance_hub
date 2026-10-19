@@ -255,7 +255,7 @@
     "title": "KYC for Mutual Funds: What It Is and How the Process Works",
     "topic": "KYC for mutual funds: what it is and how the process works",
     "category": "mutual-funds",
-    "status": "queued",
+    "status": "failed",
     "imageQuery": "documents folder stamp",
     "sources": [],
     "outline": [
@@ -278,14 +278,15 @@
       "A status of Registered can mean the investor has to complete extra steps with a new intermediary.",
       "Details such as address, mobile number and email can be updated through the KRA or the fund house when they change.",
       "Standard investor-education notices say to invest only through SEBI-registered mutual funds."
-    ]
+    ],
+    "note": "rejected after 3 tries: body is 296 words, must be at least 450"
   },
   {
     "slug": "how-to-read-a-mutual-fund-factsheet",
     "title": "How to Read a Mutual Fund Factsheet: Section by Section",
     "topic": "How to read a mutual fund factsheet section by section",
     "category": "mutual-funds",
-    "status": "queued",
+    "status": "done",
     "imageQuery": "magnifying glass paper charts",
     "sources": [],
     "outline": [
