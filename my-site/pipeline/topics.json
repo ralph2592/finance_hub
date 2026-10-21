@@ -319,7 +319,7 @@
     "title": "Open-Ended, Close-Ended and Interval Funds: How They Differ",
     "topic": "Open-ended, close-ended and interval mutual fund schemes: how they differ",
     "category": "mutual-funds",
-    "status": "queued",
+    "status": "failed",
     "imageQuery": "doors corridor",
     "sources": [
       "https://portal.amfiindia.com/spages/InvestorGuide.pdf"
@@ -345,14 +345,15 @@
       "Fixed maturity plans are close-ended schemes with a fixed tenure that matches the maturity of their investments.",
       "SEBI has revised its scheme categorisation framework, so check the current categories in the scheme documents.",
       "Before investing, check the scheme documents for when units can be bought or redeemed and for any exit load."
-    ]
+    ],
+    "note": "rejected after 3 tries: body is 335 words, must be at least 450"
   },
   {
     "slug": "what-is-a-credit-score-in-india",
     "title": "What Is a Credit Score in India and What Goes Into It?",
     "topic": "What is a credit score in India and what goes into it",
     "category": "credit-and-loans",
-    "status": "queued",
+    "status": "failed",
     "imageQuery": "speedometer gauge",
     "sources": [
       "https://cibil.com/freecibilscore"
@@ -380,6 +381,7 @@
       "Lenders now report data to the bureaus more frequently than before under RBI directions, so recent payments appear in reports sooner.",
       "Errors in a credit report can lower a score, and they can be raised with the credit bureau.",
       "A missed payment can stay visible on a credit report for a period of time."
-    ]
+    ],
+    "note": "rejected after 3 tries: claims not supported by the facts (remove or reword them): Lenders consider various factors when deciding whether to approve a loan or credit card application. | This allows individuals to monitor their credit history and score without affecting their creditworthiness. | This means that changes in a person's credit history are reflected in their report and score more quickly. | This highlights the importance of checking your credit report regularly to ensure that it is accurate and up-to-date."
   }
 ]
